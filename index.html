@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Index </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="jquery.js"> </script>
+        <script src="bootstrap3/js/bootstrap.min.js"></script>
+        <script src="style.js"> </script>
+    <head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"> <a href="#" class="navbar-brand"> HAGHADG </a>
+                  <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navs">
+                  <span class="icon-bar"> </span>
+                  <span class="icon-bar"> </span>
+                  <span class="icon-bar"> </span>
+            </div>
+            <div class="collapse navbar-collapse" id="navs">
+                   <ul class="nav navbar-nav">
+                   <li id="veg"> <a href="#"> Veg </a> </li>
+                   <li id="nonveg"> <a href="#"> Non-Veg </a> </li>
+                   <li id="restaurants"> <a href="#"> Restaurants </a> </li>
+                   </ul>
+                   <button class="btn btn-danger navbar-btn navbar-right"><span class="glyphicon glyphicon-user"> </span></button>
+                   <button class="btn btn-defaut navbar-btn navbar-right" style="margin-right:10px;"><span class="glyphicon glyphicon-log-in"> </span> </button>
+                   <!--  <button class="btn btn-default" style="float:right"> Login </button>
+                   <button class="btn btn-primary" style="float:right"> Register </buton>
+                    -->
+             </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container-fluid" style="padding-left:80px;">
+        <h1> Best Food in Town </h1>
+        <p class="lead"> That suits your tradition and mood ... </p>
+        </div>
+    </div>
+    <div class="jumbotron" id="restaurant-profile" style="height:400px">
+
+            <div class="row">
+                <div class="col col-xs-7">
+                    <h1> Restaurant </h1>
+                </div>
+                <div class="col col-xs-5" style="margin-top:0px">
+                    <ul class="list-group">
+                        <h4 class="list-group-heading"><button class="btn btn-danger"> Restaurant Profile <b> <span class="glyphicon glyphicon-option-horizontal"> </span> </b> </button> </h4>
+                        <h4>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-star-empty"> </span> 3.2 </li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-earphone"> </span> +91-8899624821</li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-envelope"> </span> abcdefg@example.com </li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-ok-circle"> </span> Halal </li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-time"> </span> 7:00am - 12:00 pm </li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-plane"> </span> Within 1hr. </li>
+                        <li class="list-group-item"> <span class="glyphicon glyphicon-usd"> </span> COD </li> </h4>
+                    </ul>
+                </div>
+            </div>
+
+    </div>
+    <div class="container-fluid" id="indexform" style="width:100%">
+        <form class="form-group" >
+            <label for="location"> Pick Up Your Locality: </label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1"> <span class="glyphicon glyphicon-map-marker"> </span> </span>
+                        <input class="form-control" type='text' name="town" placeholder="Locality" id="town">
+                        <option> <p style="font-size: 20px" id="townsuggestion">  </p> </option>
+                </div>
+                <br> <br>
+            <label for="food"> Pick Up Food : </label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon2"> <span class='glyphicon glyphicon-cutlery'> </span> </span>
+                        <select class="form-control" name="foodchoice">
+                            <option> Food Choice </option>
+                            <option> Vegeterian </option>
+                            <option> Non-Vegeterian </option>
+                        </select>
+                </div>
+                <br> <br>
+            <button class="btn btn-success" id="index" type="submit"> Find a Perfect Restaurent </button>
+        </form>
+    </div>
+    <div class="container-fluid" id="restaurantlist">
+        <div class="row">
+            <div class="col col-xs-6 col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <div class="caption"> <h3> Restaurant1 </h3> </div>
+                    <a class="thumbnail"> <img src="abc.jpg"> </a>
+                    <div class="caption">
+                        <h4> <span class="glyphicon glyphicon-stats"> </span>
+                             Quality:3.5 <span class="glyphicon glyphicon-star"> </span> </h4>
+                        <h4> <span class="glyphicon glyphicon-gbp"> </span>
+                            Price:4<span class="glyphicon glyphicon-star"> </span> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-6 col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <div class="caption"> <h3> Restaurant1 </h3> </div>
+                    <a class="thumbnail"> <img src="abc.jpg"> </a>
+                    <div class="caption">
+                        <h4> Quality: 3.5 <span class="glyphicon glyphicon-star"> </span> </h4>
+                        <h4> Price: 4<span class="glyphicon glyphicon-star"> </span> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-6 col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <div class="caption"> <h3> Restaurant1 </h3> </div>
+                    <a class="thumbnail"> <img src="abc.jpg"> </a>
+                    <div class="caption">
+                        <h4> Quality: 3.5 <span class="glyphicon glyphicon-star"> </span> </h4>
+                        <h4> Price: 4 <span class="glyphicon glyphicon-star"> </span> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-6 col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <div class="caption"> <h3> Restaurant1 </h3> </div>
+                    <a class="thumbnail"> <img src="abc.jpg"> </a>
+                    <div class="caption">
+                        <h4> Quality: 3.5 <span class="glyphicon glyphicon-star"> </span> </h4>
+                        <h4> Price: 4 <span class="glyphicon glyphicon-star"> </span> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-6 col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <div class="caption"> <h3> Restaurant1 </h3> </div>
+                    <a class="thumbnail"> <img src="abc.jpg"> </a>
+                    <div class="caption" id="rating">
+                        <h4> Quality: 3.5 <span class="glyphicon glyphicon-star"> </span> </h4>
+                        <h4>    Price: 4 <span class="glyphicon glyphicon-star"> </span> </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="restaurantmenu">
+        <div class="panel panel-default">
+            <div class="panel-heading"> <h2> Some Shit <span class="glyphicon glyphicon-menu-hamburger" style="float:right"> </span> </h2> </div>
+            <div class="panel-body">
+                <div class="thumbnail">
+                    <a href="#" class="thumbnail"> <img src="abc.jpg" style="width:100%; height:400px;"> </a>
+                    <p> This is too much appelaing par aukat se bahar </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"> <h2> Some More Shit  <span class="glyphicon glyphicon-menu-hamburger" style="float:right"> </span> </h2> </div>
+            <div class="panel-body">
+                <div class="thumbnail">
+                    <a href="#" class="thumbnail"> <img src="abc.jpg" style="width:100%; height:400px;"> </a>
+                    <p> This is too much appelaing par ye biii aukat se bahar </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="menufinal">
+        <div class="row">
+            <div class="col col-xs-12 col-sm-6 col-md-4">
+                <div class="panel">
+                    <div class="panel-heading"> <h3> Overrated Chicken </h3> </div>
+                    <div class="panel-body"> <img src="abc.jpg" style="width:100%"> </div>
+                    <div class="panel-footer">
+                    <button class="btn btn-success"> Add To Basket <span class="glyphicon glyphicon-plus-sign"> </span> </button>
+                    <button class="btn btn-success"> Buy It <span class="glyphicon glyphicon-briefcase"> </span> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-12 col-sm-6 col-md-4">
+                <div class="panel">
+                    <div class="panel-heading"> <h3> Overrated Chicken </h3> </div>
+                    <div class="panel-body"> <img src="abc.jpg" style="width:100%"> </div>
+                    <div class="panel-footer">
+                    <button class="btn btn-success"> Add To Basket <span class="glyphicon glyphicon-plus-sign"> </span> </button>
+                    <button class="btn btn-success"> Buy It <span class="glyphicon glyphicon-briefcase"> </span> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-12 col-sm-6 col-md-4">
+                <div class="panel">
+                    <div class="panel-heading"> <h3> Overrated Chicken </h3> </div>
+                    <div class="panel-body"> <img src="abc.jpg" style="width:100%"> </div>
+                    <div class="panel-footer">
+                    <button class="btn btn-success"> Add To Basket <span class="glyphicon glyphicon-plus-sign"> </span> </button>
+                    <button class="btn btn-success"> Buy It <span class="glyphicon glyphicon-briefcase"> </span> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-12 col-sm-6 col-md-4">
+                <div class="panel">
+                    <div class="panel-heading"> <h3> Overrated Chicken </h3> </div>
+                    <div class="panel-body"> <img src="abc.jpg" style="width:100%"> </div>
+                    <div class="panel-footer">
+                    <button class="btn btn-success"> Add To Basket <span class="glyphicon glyphicon-plus-sign"> </span> </button>
+                    <button class="btn btn-success"> Buy It <span class="glyphicon glyphicon-briefcase"> </span> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container" id="restaurants">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="">
+                    <h1> Restaurant1 </h1>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="veg">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="">
+                    <h1> Veg1 </h1>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="nonveg">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="">
+                    <h1> NonVeg1 </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER NOTE -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" id="footer">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <span class="navbar-brand"> HAGHADG </span>
+            </div>
+    </nav>
+
+
+
+</body>
+</html>

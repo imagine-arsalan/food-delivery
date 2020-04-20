@@ -1,0 +1,34 @@
+/*
+STYLESHEET FOR FOOD DELIVERY WEBSITE
+AUTHOR:ARSALAN RASHID
+*/
+form{
+    padding-left:10%;
+    padding-right:10%;
+}
+.navbar, li.nav{
+    height:50px;
+    font-size:25px;
+}
+.jumbotron{
+    height:300px;
+    background-color:#10efea;
+}
+/*.input-group
+#sizing-addon1{
+    width:40%;
+}*/
+form .btn{
+        width:100%;
+        height:50px;
+}
+.list-group-item{background-color:#10efea;}
+ul{margin-top:0px;}
+img{width:40%;height:30%;}
+a>img{width:100%;}
+input#errorinput.form-control{box-shadow:0 0 5px red; border-color:red;}
+input#success.form-control:focus{box-shadow:0 0 5px green; border-color:green}
+.user, .owner{
+    margin:10px auto;
+    padding-left:30%;
+}

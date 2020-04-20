@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Index </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="jquery.js"> </script>
+        <script src="bootstrap3/js/bootstrap.min.js"></script>
+        <script src="styleform.js"> </script>
+    <head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"> <a href="#" class="navbar-brand"> HAGHADG </a>
+                  <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navs">
+                  <span class="icon-bar"> </span>
+                  <span class="icon-bar"> </span>
+                  <span class="icon-bar"> </span>
+            </div>
+            <div class="collapse navbar-collapse" id="navs">
+                   <ul class="nav navbar-nav">
+                   <li id="veg"> <a href="#"> Veg </a> </li>
+                   <li id="nonveg"> <a href="#"> Non-Veg </a> </li>
+                   <li id="restaurants"> <a href="#"> Restaurants </a> </li>
+                   </ul>
+                   <button class="btn btn-danger navbar-btn navbar-right"><span class="glyphicon glyphicon-user"> </span></button>
+                   <button class="btn btn-defaut navbar-btn navbar-right" style="margin-right:10px;"><span class="glyphicon glyphicon-log-in"> </span> </button>
+                   <!--  <button class="btn btn-default" style="float:right"> Login </button>
+                   <button class="btn btn-primary" style="float:right"> Register </buton>
+                    -->
+             </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container-fluid" style="padding-left:80px;">
+        <h1> Best Food in Town </h1>
+        <p class="lead"> That suits your tradition and mood ... </p>
+        </div>
+    </div>
+
+    <div class="container" id="choice" style="width:100%;">
+        <div class="row">
+            <div class="col col-xs-12 col-md-6">
+                <div class="user">
+                <img src="user.png">
+                <h2> Are You a User ? <span class="glyphicon glyphicon-info-sign" id="info"></span></h2>
+                <p> If your intention of using the website is just for enjoying services we provide then SignUp as a user </p>
+                <button class="btn btn-success" style="margin-bottom:20px;" id="users"> Sign Up as a User </button>
+                </div>
+            </div>
+            <div class="col col-xs-12 col-md-6">
+                <div class="owner">
+                <img src="owner.png">
+                 <h2> Are You an Owner?<span class="glyphicon glyphicon-info-sign" id="info"></span> </h2>
+                 <p>If you own a Restaurant or any other outlet or just own a kitchen at home and want to give your bussiness a boost by using our platform then SignUp as an owner </p>
+                <button class="btn btn-success" style="margin-bottom:20px;" id="owners"> Sign Up as a food Supplier </button>
+            </div>
+            </div>
+        </div>
+    </div>
+<!-- USER REGISTRATION FORM STARTS -->
+    <form class="form-group" action="#" method="post" id="userform">
+        <div class='container-fluid'>
+            <div class="row">
+                <div class="col col-xs-12 col-md-6">
+                    <fieldset style=" padding:10px"> <h3><span class="glyphicon glyphicon-user"></span> User-Info </h3> <br>
+                        <label for="name"> <h4> Full Name: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
+                            <input class="form-control" type="text" name="fullname" placeholder="Jon Snow">
+                        </div>
+
+                        <label for="email"> <h4> Email: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> @ </span>
+                            <input class="form-control" type="text" name="email" placeholder="abc@example.com">
+                        </div>
+
+                        <label for="name"> <h4> Phone: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-phone"> +91 </span> </span>
+                            <input class="form-control" type="text" name="phone" placeholder="9906000000">
+                        </div>
+
+                        <label for="name"> <h4> Gender: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-user"></span> </span>
+                            <select class="form-control" name="gender">
+                                <option> Male </option>
+                                <option> Female </option>
+                                <option> I don't want to disclose. </option>
+                            </select>
+                        </div>
+
+                        <label for="name"> <h4> Password: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-lock"> </span> </span>
+                            <input class="form-control" type="password" name="password" placeholder="Password">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-lock"> </span> </span>
+                            <input class="form-control" type="password" name="confirmpassword" placeholder="Confirm Password">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col col-xs-12 col-md-6">
+                    <fieldset style="padding:10px"> <h3><span class="glyphicon glyphicon-map-marker"></span> Address-Info </h3> <br>
+                        <label for="city"> <h4> City: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                            <input class="form-control" type="text" name="city" placeholder="Pulwama">
+                        </div>
+                        <p style="font-size:20px" id='suggestion'> </p>
+
+                        <label for="town"> <h4> Town: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                            <input class="form-control" type="text" name="town" placeholder="Awantipora">
+                        </div>
+
+                        <label for="locality"> <h4> Locality: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-road"> </span> </span>
+                            <input class="form-control" type="text" name="locality" placeholder="New Colony Sherabad">
+                        </div>
+
+                        <label for="pincode"> <h4> Pincode: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-flag"> </span> </span>
+                            <input class="form-control" type="text" name="pincode" placeholder="192123">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <br> <br>
+            <div class="row">
+                <div class="col col-xs-12 col-md-6">
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-check"></span> Sign Up </button>
+                </div>
+                <div class="col col-xs-12 col-md-6">
+                    <button type="reset" class="btn btn-info" >
+                        <span class="glyphicon glyphicon-erase"></span> Reset </button>
+                </div>
+            </div>
+        </div>
+    </form>
+<!-- USER REGISTRATION FORM ENDS -->
+
+<!-- OWNER REGISTRATION FORM STARTS -->
+    <form class="form-group" action="#" method="post" id="ownerform">
+        <div class='container-fluid'>
+            <div class="row">
+                <div class="col col-xs-12 col-md-6">
+                    <fieldset style=" padding:10px"> <h3><span class="glyphicon glyphicon-user"></span> Owner-Info </h3> <br>
+                        <label for="name"> <h4> Full Name: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
+                            <input class="form-control" type="text" name="fullname" placeholder="Jon Snow">
+                        </div>
+
+                        <label for="email"> <h4> Email: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> @ </span>
+                            <input class="form-control" type="text" name="email" placeholder="abc@example.com">
+                        </div>
+
+                        <label for="name"> <h4> Phone: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-phone"> +91 </span> </span>
+                            <input class="form-control" type="text" name="phone" placeholder="9906000000">
+                        </div>
+
+                        <label for="name"> <h4> Gender: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-user"></span> </span>
+                            <select class="form-control" name="gender">
+                                <option> Male </option>
+                                <option> Female </option>
+                                <option> I don't want to disclose. </option>
+                            </select>
+                        </div>
+
+                        <label for="name"> <h4> Password: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-lock"> </span> </span>
+                            <input class="form-control" type="password" name="password" placeholder="Password">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-lock"> </span> </span>
+                            <input class="form-control" type="password" name="confirmpassword" placeholder="Confirm Password">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col col-xs-12 col-md-6">
+                    <fieldset style="padding:10px"> <h3><span class="glyphicon glyphicon-map-marker"></span> Owner Address-Info </h3> <br>
+                        <label for="city"> <h4> City: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                            <input class="form-control" type="text" name="city" placeholder="Pulwama">
+                        </div>
+
+                        <label for="town"> <h4> Town: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                            <input class="form-control" type="text" name="town" placeholder="Awantipora">
+                        </div>
+
+                        <label for="locality"> <h4> Locality: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-road"> </span> </span>
+                            <input class="form-control" type="text" name="locality" placeholder="New Colony Sherabad">
+                        </div>
+
+                        <label for="pincode"> <h4> Pincode: </h4></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"> <span class="glyphicon glyphicon-flag"> </span> </span>
+                            <input class="form-control" type="text" name="pincode" placeholder="192123">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        <!--    <div class="row" id="question"> -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4> <span class="glyphicon glyphicon-tower"> If You Own a Restaurant? </span> </h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col col-xs-12 col-md-6">
+                                <fieldset style="padding:10px"> <h3><span class="glyphicon glyphicon-glass"> </span> Restaurant Info </h3>
+                                    <label for="locality"> <h4> Restaurant Name: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-glass"> </span> </span>
+                                        <input class="form-control" type="text" name="restaurantname" placeholder="Winterfell">
+                                    </div>
+
+                                    <label for="locality"> <h4> Office Phone: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-phone-alt"> </span> </span>
+                                        <input class="form-control" type="text" name="officephone" placeholder="9906000000">
+                                    </div>
+
+                                    <label for="locality"> <h4> Office Email: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span> @ </span> </span>
+                                        <input class="form-control" type="text" name="officeemail" placeholder="abc@example.com">
+                                    </div>
+
+                                    <label for="locality"> <h4> Website(if any): </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-globe"> </span> </span>
+                                        <input class="form-control" type="text" name="officeweb" placeholder="abc.com">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class='col col-xs-12 col-md-6'>
+                                <fieldset style="padding:10px"> <h3> <span class="glyphicon glyphicon-map-marker"> </span> Restaurant Address Info: </h3>
+                                    <label for="locality"> <h4> City: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                                        <input class="form-control" type="text" name="officecity" placeholder="Pulwama">
+                                    </div>
+
+                                    <label for="locality"> <h4> Town: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-align-center"> </span> </span>
+                                        <input class="form-control" type="text" name="officetown" placeholder="Tral">
+                                    </div>
+
+                                    <label for="locality"> <h4> Locality: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-road"> </span> </span>
+                                        <input class="form-control" type="text" name="officelocality" placeholder="New Colony Sherabad">
+                                    </div>
+
+                                    <label for="locality"> <h4> Landmark: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-tower"> </span> </span>
+                                        <input class="form-control" type="text" name="near" placeholder="Opposite Something">
+                                    </div>
+
+                                    <label for="locality"> <h4> Pincode: </h4></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-flag"> </span> </span>
+                                        <input class="form-control" type="text" name="officepin" placeholder="192122">
+                                    </div>
+                                </fieldset>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4> <span class="glyphicon glyphicon-tower"> If You Work at Home? </span> </h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col col-xs-12 col-md-6">
+                        <fieldset style="padding:10px"> <h3> Info: </h3>
+                            <label for="locality"> <h4>Phone: </h4></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"> <span class="glyphicon glyphicon-phone-alt"> </span> </span>
+                                <input class="form-control" type="text" name="homeephone" placeholder="9906000000">
+                            </div>
+
+                            <label for="locality"> <h4> Email: </h4></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"> <span> @ </span> </span>
+                                <input class="form-control" type="text" name="homeemail" placeholder="abc@example.com">
+                            </div>
+
+                            <label for="locality"> <h4> Website(if any): </h4></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"> <span class="glyphicon glyphicon-globe"> </span> </span>
+                                <input class="form-control" type="text" name="homeweb" placeholder="abc.com">
+                            </div>
+                        <fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <br> <br>
+            <div class="row">
+                <div class="col col-xs-12 col-md-6">
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-check"></span> Sign Up </button>
+                </div>
+                <div class="col col-xs-12 col-md-6">
+                    <button type="reset" class="btn btn-info">
+                        <span class="glyphicon glyphicon-erase"></span> Reset </button>
+                </div>
+            </div>
+        </div>
+    </form>

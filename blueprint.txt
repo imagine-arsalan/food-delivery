@@ -1,0 +1,24 @@
+index page -->
+		links: 
+		Select Locality +
+		two options: Veg or Non-Veg
+
+
+......  SEARCH RESTAURANTS IN THIS LOCALITY AVAILABLE AND FETCH THEIR MENU  ......
+
+	--Veg:					--NON-VEG:
+		LIST OF RESTAURANTS                         LIST OF RESTAURANTS
+		+ THEIR VEG PROFILE				+THEIR NON-VEG PROFILE	  
+  		+ Rating						+Rating
+
+.......   USER SELECTS ANY ONE OF THE RESTAURANT    .........
+ --> display : 
+		MENU OF ITEMS AVAILABLE + THEIR RATE
+		i ICON ABOUT RESTAURANT
+.......  USER SELECTS ANY ITEM ........
+ --> display : 
+		form--> i) Quantity ii)Userinfo
+			--> PLACE ORDER <--
+
+
+	
